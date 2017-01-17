@@ -1,0 +1,492 @@
+This is Google's cache of https://www.dragonflycave.com/stats.aspx. It is a snapshot of the page as it appeared on Jan 14, 2017 07:53:15 GMT.
+The current page could have changed in the meantime. Learn more
+Full versionText-only versionView sourceTip: To quickly find your search term on this page, press Ctrl+F or ⌘-F (Mac) and use the find bar.
+6908427
+front page hits
+
+The Cave of Dragonflies
+
+Where the smallest bugs live alongside the strongest dragons
+
+The Day of Shellder in the Reign of Kyurem, Season of Water
+
+Style Switcher: [?] Pick style... Modern [img][mod] Dewgong Axe-Murderer Dialga [img] Scyther [img] Shiny Ninetales Celebi [img][fixed] Nidoking [img] Mew Hellfire [img] Spectrum [img] Articuno [img] Torkoal
+Stat Mechanics
+
+Have you ever wondered exactly what's behind your Pokémon's stats? How come trained Pokémon have higher stats than wild Pokémon? Why do the wild Pokémon you catch have different stats from each other? What are those values on the stat screen, anyway?
+
+As any Pokémon fan should know, every Pokémon has six stats named HP (Hit Points), Attack, Defense, Sp. Atk (Special Attack), Sp. Def (Special Defense), and Speed - though in the first generation, there was only a single Special stat. Here I will walk you through exactly how these values are determined, the relevant terms, how you can affect them, and how things have changed over the history of the franchise. In particular, many things about Pokémon stats changed between the second and third generations; in this section, pre-Advance refers to the way things were in Red, Blue, Yellow, Gold, Silver and Crystal, whereas post-Advance refers to how things have been since Ruby and Sapphire.
+
+The Stat Formula
+
+Pokémon stats are, in short, governed by a formula. For Attack, Defense, Special Attack, Special Defense and Speed, the formula is this:
+
+Stat = floor(floor((2 * B + I + E) * L / 100 + 5) * N)
+
+floor(something) stands for rounding down, or taking off everything after the decimal point; don't let it confuse you.
+
+Meanwhile, the HP formula is a little different:
+
+Stat = floor((2 * B + I + E) * L / 100 + L + 10)
+
+There is a single exception to this: Shedinja, with a base HP (see below) of 1, circumvents the formula altogether to always have an HP value of exactly 1. Aside from that quirk, the HP formula is essentially exactly the same as the normal stat formula except for getting rid of the multiplication by N and replacing the 5 near the end with L + 10.
+
+So what are those letters in the formula? They're the five variables that can affect the stats of your Pokémon: base stats, IVs, effort, level, and nature. Let's tackle them one at a time.
+
+B (Base Stat)
+
+Base stats are constants for each of the six stats of each Pokémon species, representing the general relative ability of that species in this regard. For example, Pikachu have a Speed base stat of 90, so for calculating a Pikachu's Speed, the B value in the formula will always be 90. Most online Pokédexes, including veekun, will show base stats prominently on each Pokémon's entry. Thanks to their great range (they can be anything from the single digits up to 255, and that range is further expanded by the multiplication by two in the formula), base stats are the very most influential factor in a Pokémon's stats after its level.
+
+When the second-generation games split R/B/Y's Special stat into Special Attack and Special Defense, each Pokémon had either its base Special Attack or Special Defense set to the old Special value for the species, while the other was created anew.
+
+I (Individual Value)
+
+Individual values, or IVs as they are most commonly referred to (pre-Advance, they were often referred to as DVs, standing for either Deter Values or Diversification Values, but "IVs" is almost exclusively used today), are the values responsible for the proclamation that no two Pokémon are alike: they vary between individuals even if they're of the same species, at the same level, have the same nature, and are both freshly caught.
+
+The IVs of a Pokémon are determined at random when you encounter it in the wild or receive the egg it hatches from (though when an egg is created, some of the randomly generated IVs are overwritten with inherited IVs from its parents). Once a Pokémon's IVs have been generated, they can never be changed; they represent the Pokémon's genetic propensity towards the stat in question.
+
+Pre-Advance IVs
+
+In the first two generations, each Pokémon had five IVs that could range from 0 to 15: HP, Attack, Defense, Speed and Special. (Even as Special was split into two stats in Gold, Silver and Crystal, the games maintained compatibility with Red, Blue and Yellow and thus used the single Special IV in the formula for both the Special Attack and Special Defense stats.)
+
+The HP IV was not technically generated at random in these games, but was instead calculated as follows from the other IVs after they had been randomly generated:
+
+Make a variable X and set its value to 0.
+If the Attack IV is odd, add 8 to X.
+If the Defense IV is odd, add 4 to X.
+If the Speed IV is odd, add 2 to X.
+If the Special IV is odd, add 1 to X.
+Make the HP IV equal to X.
+This meant that if a R/B/Y/G/S/C Pokémon had a perfect 15 in its Attack, Defense, Speed and Special IVs, it would automatically have a 15 for HP too, while conversely, if it had a 0 for Attack, Defense, Speed and Special, it would have 0 for HP too. In a twist of fate, it also meant that shiny Pokémon in those games, which are actually defined as any Pokémon with Defense, Speed and Special IVs of 10 and an Attack IV of 2, 3, 6, 7, 10, 11, 14 or 15, would always have either an average HP IV (8), for an odd Attack but even everything else, or the worst it could be (0), for all the other IVs even.
+
+In the pre-Advance games, gender was also determined by IVs, specifically the Attack IV: each species had a cutoff value such that anything with an Attack IV equal to or below it would be female and all others would be male. Thus, if the genders for a species were 50/50, individuals with an Attack IV of 7 or below were designated female, while individuals with an Attack IV of 8 or above were designated male. This also meant that perfect-IV Pokémon were always male unless the species was all-female or genderless. Needless to say, this had a ton of unfortunate sexist implications, and Ruby and Sapphire completely revamped the system so that gender and shininess are now both completely unconnected to IVs.
+
+The I value in the formula for the pre-Advance games is two times the actual IV, so that a perfect IV of 15 yields an I value of 30 and so on.
+
+Post-Advance IVs
+
+Ruby and Sapphire, by breaking compatibility with the previous games, managed to completely erase the interdependence of the Special stats; there is now one IV for each of the six stats. They also expanded the range of IVs to twice what it used to be: instead of sixteen possible values, they now have 32, ranging from 0 to 31. Finally, the IVs are now fully independent, with the HP IV generated at random like the other IVs instead of being calculated from them.
+
+The fourth generation added a feature known as the characteristic, a short piece of text on a Pokémon's stat screen describing its personality (such as "Loves to run" or "Somewhat of a clown"). The characteristic actually indicates the final digit of the Pokémon's highest IV:
+
+If the Pokémon "Loves to eat" (final digit 0 or 5), "Often dozes off" (final digit 1 or 6), "Often scatters things" (final digit 2 or 7), "Scatters things often" (final digit 3 or 8) or "Likes to relax" (final digit 4 or 9), its highest IV is HP.
+If the Pokémon is "Proud of its power" (final digit 0 or 5), "Likes to thrash about" (final digit 1 or 6), "A little quick-tempered" (final digit 2 or 7), "Likes to fight" (final digit 3 or 8) or "Quick-tempered" (final digit 4 or 9), its highest IV is Attack.
+If the Pokémon has a "Sturdy body" (final digit 0 or 5), is "Capable of taking hits" (final digit 1 or 6), "Highly persistent" (final digit 2 or 7), has "Good endurance" (final digit 3 or 8) or "Good perseverance" (final digit 4 or 9), its highest IV is Defense.
+If the Pokémon "Likes to run" (final digit 0 or 5), is "Alert to sounds" (final digit 1 or 6), "Impetuous and silly" (final digit 2 or 7), "Somewhat of a clown" (final digit 3 or 8) or "Quick to flee" (final digit 4 or 9), its highest IV is Speed.
+If the Pokémon is "Highly curious" (final digit 0 or 5), "Mischievous" (final digit 1 or 6), "Thoroughly cunning" (final digit 2 or 7), "Often lost in thought" (final digit 3 or 8) or "Very finicky" (final digit 4 or 9), its highest IV is Special Attack.
+If the Pokémon is "Strong-willed" (final digit 0 or 5), "Somewhat vain" (final digit 1 or 6), "Strongly defiant" (final digit 2 or 7), "Hates to lose" (final digit 3 or 8) or "Somewhat stubborn" (final digit 4 or 9), its highest IV is Special Defense.
+Since the highest value an IV can have is always 31, the characteristics that indicate a final digit of 1 or 6 are the only ones a perfect-IV Pokémon can have. If two or more IVs are equal as the highest, the one the characteristic corresponds to is essentially random.
+
+With the increased range of IVs, the I value in the formula is now simply the IV. Since the maximum IV thus now yields an I value of 31, all neutral level 100 max stats actually rose by one between the second and third generations.
+
+Finding IVs
+
+People commonly want to find out the IVs of their Pokémon; to do this, it is best to use one of the many IV calculators found on the Internet, such as this one. Unfortunately, to be able to calculate IVs in the newer games, you will need to know...
+
+E (Effort Value/Stat Experience)
+
+The E value in the formula represents the advantage gained through training: this value is zero for all the stats in wild or freshly caught Pokémon and Pokémon that have just hatched from eggs, but as your Pokémon battle and defeat other Pokémon, their stats will rise faster than they would have if they had leveled up through the Day-Care or Rare Candies. This is what in-game trainers mean when they tell you trained Pokémon are better than freshly caught ones and why you may have heard people advise you not to overuse Rare Candies since your Pokémon will become weaker for it. "Vitamins", the expensive items (Protein, Iron, etc.) that permanently raise stats, actually work by raising this value for the stat in question; however, vitamins will stop having an effect before the stat maxes out, so to reach its full potential, a Pokémon must get proper battle experience.
+
+In the first three generations, a level 100 Pokémon would continue to gain stat improvements this way by battling, but in order for these gains to actually be applied to its stats, it would have to be deposited on the PC and then withdrawn, which would recalculate them - otherwise, stat recalculation only happened when a Pokémon leveled up or evolved. This was called the "box trick". In the fourth generation, level 100 Pokémon weren't able to gain any kind of experience at all, so that even with the box trick, once a Pokémon reached level 100 it could not raise its stats further even if they had not yet been maxed out. The fifth generation changed it so that stats are recalculated after every battle, and furthermore it allowed level 100 Pokémon to gain stat improvements in battle again, which means they can raise their stats even without using the box trick - the stat gains will appear immediately after the end of a battle.
+
+The details of how this value works are one of the most drastic and important changes in Pokémon stats between the second and third generations, though this basic idea is the same.
+
+Pre-Advance: Stat Experience
+
+In R/B/Y/G/S/C, Pokémon had one stat experience value for each R/B/Y stat (HP, Attack, Defense, Speed and Special). Every time a Pokémon defeated another Pokémon, it would gain stat experience equal to the base stats of that Pokémon's species. Thus, defeating a Pikachu - at any level - would give 35 stat experience points in HP, 55 in Attack, 30 in Defense, 90 in Speed, and 50 in Special. (In G/S/C, Special stat experience would be gained in accordance with the defeated Pokémon's base Special Attack stat.) Stat experience would be split between the Pokémon that participated in the battle the same way regular experience was (the EXP Share in G/S/C also shared stat experience, but the EXP All from R/B/Y did not). Each individual Pokémon could gain up to 65535 stat experience points in each stat.
+
+The vitamins (HP Up for HP, Protein for Attack, Iron for Defense, Carbos for Speed and Calcium for Special) would add 2560 stat experience points to their respective stat - which is the reason G/S/C, with two Special stats, only had one vitamin for both. However, vitamins would fail to work on any Pokémon that already had 25600 stat experience points in the stat in question.
+
+Once a Pokémon reached level 100, it would no longer level up and thus its stats would ordinarily not increase even though it continued to get stat experience. However, since these games did not actually store the stats of Pokémon on the PC - only the variables that affected them, from which it could calculate the stats when you withdrew them using the formula - it was possible to get a level 100 Pokémon's stats to continue to rise in accordance with its stat experience by simply depositing it onto the computer and then withdrawing it again.
+
+For the pre-Advance games, to get the actual E value used in the stat formula, you must use another formula, E = floor(min(255, floor(√(max(0, Stat Experience - 1)) + 1)) / 4). This means that with the maximum of 65535 stat experience points in a stat, the E value is 63 - though just 63002 stat experience points also suffice to get that end result.
+
+Post-Advance: Effort Values
+
+Effort values (abbreviated EVs) replace the stat experience of the first and second generation in the third onwards. There is one effort value for each of the six stats, with each maxing out at 252 (255 prior to the sixth generation). Instead of the Pokémon you battle giving points according to their base stats, each Pokémon species has a separately defined yield of effort points (which you can find in most online Pokédexes under something like "effort points" or "effort given") that it gives when you defeat it. For example, Sceptile gives three Speed effort points, so if you defeat a Sceptile, the Pokémon you used will get three effort points in Speed.
+
+If many Pokémon share the level experience, whether thanks to the usage of an EXP Share or because many Pokémon took part in the battle, all the Pokémon will get the same number of effort points as one Pokémon would have for battling it alone - so if you battle a Sceptile, withdraw your first Pokémon and send out another one that defeats it, both of them will get three effort points in Speed, rather than it being split between them as with the stat experience of the first two generations.
+
+Effort points, like stat experience, can also be gained through the use of vitamins, which this time will each give 10 effort points in their designated stat (HP Up for HP, Protein for Attack, Iron for Defense, Carbos for Speed, Calcium for Special Attack and Zinc for Special Defense). Like before, there is a cap on how many of your effort points can come from vitamins: once a Pokémon has 100 effort points in a stat, that stat's vitamin will no longer have an effect on the Pokémon. The Wing items added in the fifth generation, however (Health Wing for HP, Muscle Wing for Attack, Resist Wing for Defense, Genius Wing for Special Attack, Clever Wing for Special Defense and Swift Wing for Speed), add one effort point in their respective stat but are not subject to the 100-point limit.
+
+So far this all just sounds like stat experience with smaller numbers, but there is one important difference: in addition to the maximum of 252/255 effort points in any given stat, a Pokémon can only have a maximum of 510 effort points total. Once that limit is reached, the Pokémon will gain no more effort points. This means it can't max out all of its stats at the same time; you can max out two stats but that means sacrificing the rest. Effort points therefore add an interesting strategic element to training, with the unfortunate side-effect that the EV spreads in-game Pokémon accumulate during normal gameplay are generally extremely suboptimal.
+
+Because of this, players have a good reason to want to remove unwanted effort points and spend them on some other stat instead. This was not possible in Ruby, Sapphire, FireRed or LeafGreen, to many people's frustration, but since Emerald, six formerly useless Berries will raise a Pokémon's happiness in exchange for lowering its effort value in a particular stat by ten points:
+
+BerryEV lowered Pomeg Berry Kelpsy Berry Qualot Berry Hondew Berry Grepa Berry Tamato Berry
+HP
+Attack
+Defense
+Special Attack
+Special Defense
+Speed
+In Emerald and the fourth-generation games, using one of these berries would lower the EV straight to 100 if it was over 110, in order to make it somewhat easier to completely undo effort training (instead of needing twenty-five berries to erase all the effort from a stat with an EV of 250, you only need eleven). In the fifth generation, this feature was removed.
+
+The sixth-generation games added the Super Training touch screen app as a quick way to EV train without battling; you can boost a Pokémon's EVs either using training bags (small ones give one point, medium ones give four points, and large ones give twelve points) or by participating in a Super-Training Regimen, a soccer-like minigame with three stages for each stat (the first stage gives four points in that stat, the second gives eight points and the third gives twelve points). It is also possible to reset a Pokémon's EVs completely using a Reset Bag, which is handy if you want to redo your in-game team's effort distribution.
+
+The way to determine the actual E value for the formula is considerably simpler now: it is simply the effort value for the stat in question divided by four and then rounded down. Prior to the sixth generation, the maximum effort value in a stat was 255, but 255 / 4 is 63.75, so the actual E value would only be 63, the same as for an EV of 252. This meant the extra three effort points would be wasted and the player had to carefully make sure not to exceed 252 in a stat in order not to waste points. In the sixth generation, the maximum effort value was changed to 252 to prevent this. At least two of your 510 effort points will sadly always go to waste, however, as 510 is not divisible by four.
+
+Notice that both stat experience and effort values end up with the E value in the same range: 0-63.
+
+L (Level)
+
+L is simply the current level of the Pokémon in question. Seeing as the level is multiplied by most of the other values in the formula and has a great range (from 1 to 100, if you didn't know), it is usually the very most influential value for a stat: a high-level Shuckle will outspeed a low-level Ninjask, for instance, even though Shuckle's base Speed is 5 and Ninjask's is 160.
+
+N (Nature)
+
+A Pokémon's nature describes its personality and is displayed on every Pokémon's summary screen in the Advance games onwards. Natures didn't exist in the pre-Advance games, so for the purposes of R/B/Y/G/S/C, always regard N as being 1.
+
+Some natures are neutral and have no effect on your Pokémon's stats, while others increase one stat by 10% at the cost of decreasing another by 10%. Hit Points are never affected by natures, but there is a nature corresponding to every possible pair of the other five stats to raise/lower, in addition to five neutral ones. Since HeartGold and SoulSilver, your Pokémon's nature's effect on its stats has been indicated on the stat screen by coloring the name of the boosted stat red and the name of the reduced stat blue, but for reference, here's a table of all the natures:
+
+NatureIncreasesDecreases Hardy Lonely Brave Adamant Naughty Docile Bold Relaxed Impish Lax Serious Timid Hasty Jolly Naive Bashful Modest Mild Quiet Rash Quirky Calm Gentle Sassy Careful
+None	None
+Attack	Defense
+Attack	Speed
+Attack	Special Attack
+Attack	Special Defense
+None	None
+Defense	Attack
+Defense	Speed
+Defense	Special Attack
+Defense	Special Defense
+None	None
+Speed	Attack
+Speed	Defense
+Speed	Special Attack
+Speed	Special Defense
+None	None
+Special Attack	Attack
+Special Attack	Defense
+Special Attack	Speed
+Special Attack	Special Defense
+None	None
+Special Defense	Attack
+Special Defense	Defense
+Special Defense	Speed
+Special Defense	Special Attack
+Incidentally, Pokémon also have different PokéBlock/Poffin flavor preferences depending on their nature. Each flavor corresponds to one stat (Spicy for Attack, Sour for Defense, Sweet for Speed, Dry for Special Attack and Bitter for Special Defense), and the Pokémon will like the flavor associated with the stat their nature raises but dislike the one associated with the stat it lowers.
+
+The N value in the formula itself will take on one of three values:
+
+1.1 if the Pokémon's nature raises the stat in question;
+1 if the Pokémon's nature does not affect the stat in question;
+0.9 if the Pokémon's nature lowers the stat in question.
+An Example
+
+To show how this all magically works, let's go through the stat formula for my Diamond version Butterfree, whose IVs I have calculated and whose EVs I have monitored, for a demonstration of how this all works. My Butterfree is level 53 at the moment of writing, has a Modest nature, and has been EV trained to have 4 Effort Points in HP, 254 in Special Attack and 252 in Speed but nothing in everything else. Butterfree's (rather shoddy) base stats and this particular one's (strangely good, considering it was only the fourth egg I hatched) IVs are as follows:
+
+StatBaseIV HP Attack Defense Special Attack Special Defense Speed
+60	28
+45	4
+50	17
+80	30
+80	27
+70	31
+Let's now calculate its stats from this information.
+
+HP
+
+HP = floor((2 * 60 + 28 + 1) * 53 / 100 + 53 + 10)
+
+HP = floor(149 * 53 / 100 + 63)
+
+HP = floor(149 * 53 / 100 + 63)
+
+HP = floor(141.97)
+
+HP = 141
+
+Attack
+
+Attack = floor(floor((2 * 45 + 4 + 0) * 53 / 100 + 5) * 0.9)
+
+Attack = floor(floor(94 * 53 / 100 + 5) * 0.9)
+
+Attack = floor(floor(54.82) * 0.9)
+
+Attack = floor(54 * 0.9)
+
+Attack = floor(48.6)
+
+Attack = 48
+
+Defense
+
+Defense = floor(floor((2 * 50 + 17 + 0) * 53 / 100 + 5) * 1)
+
+Defense = floor(floor(117 * 53 / 100 + 5) * 1)
+
+Defense = floor(floor(67.01) * 1)
+
+Defense = floor(67 * 1)
+
+Defense = 67
+
+Special Attack
+
+Special Attack = floor(floor((2 * 80 + 30 + 63) * 53 / 100 + 5) * 1.1)
+
+Special Attack = floor(floor(253 * 53 / 100 + 5) * 1.1)
+
+Special Attack = floor(floor(139.09) * 1.1)
+
+Special Attack = floor(139 * 1.1)
+
+Special Attack = floor(152.9)
+
+Special Attack = 152
+
+Special Defense
+
+Special Defense = floor(floor((2 * 80 + 27 + 0) * 53 / 100 + 5) * 1)
+
+Special Defense = floor(floor(187 * 53 / 100 + 5) * 1)
+
+Special Defense = floor(floor(104.11) * 1)
+
+Special Defense = floor(104 * 1)
+
+Special Defense = 104
+
+Speed
+
+Speed = floor(floor((2 * 70 + 31 + 63) * 53 / 100 + 5) * 1)
+
+Speed = floor(floor(234 * 53 / 100 + 5) * 1)
+
+Speed = floor(floor(129.02) * 1)
+
+Speed = floor(129 * 1)
+
+Speed = 129
+
+Unsurprisingly, all of these values are exactly what is shown on my Butterfree's stat screen. Through the formula, I can also find out for certain that at level 100 my Butterfree will have 259 HP, 89 Attack, 122 Defense, 283 Special Attack, 192 Special Defense and 239 Speed, unless I start giving it EV-lowering Berries and EV training it differently (which I won't).
+
+If you'd like to learn more about how the stats actually come into play in battle, see the battle mechanics section.
+
+Page last modified August 12 2016 at 22:34 GMT
+
+Site
+Featured Section News
+Gasp! It's the news page! Maybe I, you know, updated since you last saw it. Or you can go vote in the Almighty Random Poll.
+Newest Updates
+Old Updates
+Mascots
+Site History
+April Fools' Jokes
+Report Errors
+FAQ
+About Me
+Contact Me
+Hall of Fame
+Rulers of the Universe
+Quiz Hall
+Poll Hall
+Guestbook
+Forums
+The Style Switcher
+Front Page Hits?
+Zodiac
+Affiliate with TCoD
+Link to TCoD
+Pokémon
+Fun Facts
+Movie Reviews
+About the Reviews
+Mewtwo Strikes Back
+The Power of One
+Spell of the Unown
+Voice of the Forest
+Pokémon Heroes
+Jirachi: Wish Maker
+Destiny Deoxys
+The Mystery of Mew
+The Temple of the Sea
+The Rise of Darkrai
+The Sky Warrior
+The Jewel of Life
+Mewtwo Returns
+Legend of Thunder
+Pokémon Origins
+Opinions/Theories
+Rant: Overrated
+Rant: English Names
+Pokémon Genetics
+Incense Breeding
+The Mew Trick
+History of Training
+Anti-Anti-Pokémon
+Animal Cruelty?
+Why Do We Like It?
+Is Pokémon Childish?
+Religious Objections
+The Games
+Fancy a Challenge?
+Evolution List
+Espeon and Umbreon
+Interactive Type Chart
+Game Mechanics
+Stat Mechanics
+Stat Stages
+Battling Basics
+Battle Mechanics
+Gen I Capturing
+Gen II Capturing
+Gen III/IV Capturing
+Gen V Capturing
+Gen VI Capturing
+R/B/Y Safari Zone
+R/B/Y Stat Mods
+Status Ailments
+Honey Trees
+Calculators
+Gen I Capture Calculator
+Gen II Capture Calculator
+Gen III/IV Capture Calculator
+Gen V Capture Calculator
+Gen VI Capture Calculator
+EVs, Natures and Math
+Experimentation
+Kanto
+R/B/Y Tips and Tricks
+Gen I Capturing
+Gen I Capture Calculator
+Gen I Locations
+R/B/Y Stat Mods
+R/B/Y Safari Zone
+FR/LG Walkthrough
+FR/LG VS Seeker
+Gen III Locations
+Johto
+Gold or Silver?
+The Battle Tower
+Mt. Silver Guide
+Legendary Whatevers
+Gen II Capturing
+Gen II Capture Calculator
+HG/SS Changes
+Voltorb Flip Guide
+Places to Train
+Gen III/IV Capturing
+Gen III/IV Capture Calculator
+Gen IV Locations
+Hoenn
+Tips and Tricks
+The TRUTH of R/S/E
+Gen III Locations
+Gen III/IV Capturing
+Gen III/IV Capture Calculator
+Gen VI Capturing
+Gen VI Capture Calculator
+Sinnoh
+D/P Changes
+Platinum Changes
+D/P Vs. Seeker
+Platinum Vs. Seeker
+Places to Train
+Gen IV Locations
+Gen III/IV Capturing
+Gen III/IV Capture Calculator
+Ribbon Syndicate
+Honey Trees
+Unova
+B/W Changes
+B2/W2 Changes
+Gen V Locations
+Gen V Capturing
+Gen V Capture Calculator
+Kalos
+Gen VI Locations
+Gen VI Capturing
+Gen VI Capture Calculator
+Orre
+Colosseum Review
+Shadow Pokémon
+Purification Guide
+Shadow Pokémon List
+Pokémon Go
+Review
+Guide
+Stat Mechanics
+Spin-Offs
+Trozei Review
+MD Blue Review
+MD Time Review
+Ranger Review
+Ranger 2 Review
+Conquest Review
+Fun
+The Secret Link
+The Clue Game
+Magikarp: tG
+Pokémon Hangman
+The Number Game
+Favorite Pokémon
+The Marquee of Doom
+Irregular Crossword
+Quizzes
+What Pokémon Are You?
+What Type Are You?
+Pokémon Fan Test
+Steel Quiz
+Flying Quiz
+Yellow Quiz
+G/S/C Quiz
+Humour
+Conspiracy Theories
+Babelfished
+In-Game Humour
+What Trainer Class Are You?
+Guides
+Spriting
+Proving Sprite Theft
+Making Fake Pokémon
+Making Fan Theories
+Reviewing
+Webmasters
+HTML Guide
+Website Tips
+Writing Content
+Kinds of Content
+Page Pitfalls
+Site Rater
+Free Layouts
+Free Quiz Scripts
+Resources
+Pokémon List Generator
+Sprite Generator
+Pokémon Sprites
+Creative
+Fan Fiction
+Fake Pokémon
+Fake Cheats
+My Sprites
+Follow TCoD
+TwitterTwitter
+Sibling Sites
+veekunveekun
+Studio-Revolution.netStudio-Revolution.net
+Altered OriginAltered Origin
+Affiliates
+Floatzel.NetFloatzel.Net
+EeveelutionsEeveelutions
+Sneasel Plushie!Sneasel Plushie!
+PokEditPokEdit
+PokéPrintPokéPrint
+Stareon's HideoutStareon's Hideout
+PokéDSPokéDS
+Aqua BunnyAqua Bunny
+PLDH.netPLDH.net
+Pokémon RebirthPokémon Rebirth
+Fanfic
+The Quest for the LegendsThe Quest for the Legends
+Links
+Serebii.netSerebii.net
+Dogasu's BackpackDogasu's Backpack
+Super EffectiveSuper Effective
+Rare Candy TreatmentRare Candy Treatment
+I care about the truth, and I strive to keep the information on this website accurate and up-to-date. For instance, where possible, I have taken pains to personally test claims about the video games before making them. However, doing so is not always feasible, occasionally I manage to be wrong even when I think I've confirmed something, and with a website of this size, it's difficult to keep track of every single piece of information anywhere on it that might need to be changed or updated. Thus, if you spot any errors, mistakes or out-of-date tidbits - or even just typos - I'd be thrilled if you would report them via this form.
+
+Pokémon, Pikachu and all other Pokémon characters © 1995-2017 Nintendo, GAME FREAK and Creatures, Inc. This is a fan-made website. No infringement is intended.
+
+All layouts, non-official graphics and content © 2002-2017 Butterfree/Dragonfree/antialiasis unless otherwise stated.
