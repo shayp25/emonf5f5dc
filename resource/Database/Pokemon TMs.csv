@@ -26,7 +26,7 @@ TM Number,Move Number,Move
 25,87,Thunder
 26,89,Earthquake
 27,216,Return
-28,141,Leech Life
+28,91,Dig
 29,94,Psychic
 30,247,Shadow Ball
 31,280,Brick Break
@@ -57,7 +57,7 @@ TM Number,Move Number,Move
 56,374,Fling
 57,451,Charge Beam
 58,507,Sky Drop
-59,693,Burtal Swing
+59,510,Incinerate
 60,511,Quash
 61,261,Will-O-Wisp
 62,512,Acrobatics
@@ -65,16 +65,16 @@ TM Number,Move Number,Move
 64,153,Explosion
 65,421,Shadow Claw
 66,371,Payback
-67,684,Smart Strike
+67,514,Retaliate
 68,416,Giga Impact
 69,397,Rock Polish
-70,694,Aurora Veil
+70,148,Flash
 71,444,Stone Edge
 72,521,Volt Switch
 73,86,Thunder Wave
 74,390,Gyro Ball
 75,14,Swords Dance
-76,19,Fly
+76,522,Struggle Bug
 77,244,Psych Up
 78,523,Bulldoze
 79,524,Frost Breath
@@ -92,10 +92,10 @@ TM Number,Move Number,Move
 91,148,Flash Cannon
 92,433,Trick Room
 93,528,Wild Charge
-94,57,Surf
+94,249,Rock Smash
 95,555,Snarl
 96,267,Nature Power
 97,399,Dark Pulse
-98,127,Waterfall
+98,612,Power-Up Punch
 99,605,Dazzling Gleam
 100,590,Confide
