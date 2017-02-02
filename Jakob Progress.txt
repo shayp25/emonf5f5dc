@@ -1,0 +1,3 @@
+Jakob Progress
+Got IntelliJ to work and started basic coding
+Is working on evolutionary clauses and prerequisites for all Pokemon
