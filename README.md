@@ -13,3 +13,7 @@
 
 ###Link to pokedex descriptions - https://1drv.ms/x/s!ArvNBuQoBofMySXxajtXVVSm7wWl
 
+###Week 2 - 
+###Aashay - Worked on pokedex descriptions
+###Kyle - Worked on pokedex descriptions
+###Link to pokedex descriptions - https://1drv.ms/x/s!ArvNBuQoBofMySXxajtXVVSm7wWl
